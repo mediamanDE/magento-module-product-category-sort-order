@@ -5,6 +5,8 @@ Provides a sort order for category position.
 The default Magento2 `/rest/V1/products` REST API endpoint does not allow to sort by products category position.
 This module addresses this problem by plugging in seamlessly into the Magento2 API.
 
+[![Build Status](https://travis-ci.org/mediamanDE/magento-module-product-category-sort-order.svg?branch=master)](https://travis-ci.org/mediamanDE/magento-module-product-category-sort-order)
+
 ## Getting Started
 
 Install the module via composer
