@@ -204,6 +204,22 @@ class ProductCategorySortOrderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @test ::beforeSetCurPage without searchCriteria being specified
+     */
+    public function testBeforeSetCurPageWithoutSearchCriteria()
+    {
+        $this->httpMock->expects(static::once())
+            ->method('get')
+            ->with('searchCriteria')
+            ->willReturn(null);
+
+        $this->productCollectionMock->expects(static::never())
+            ->method('addCategoryFilter');
+
+        $this->assertNull($this->subject->beforeSetCurPage($this->productCollectionMock, 1));
+    }
+
+    /**
      * @test ::beforeSetCurPage without a sort order being specified
      */
     public function testBeforeSetCurPageWithoutSortOrderSpecified()
