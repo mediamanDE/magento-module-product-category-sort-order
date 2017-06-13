@@ -10,7 +10,7 @@ This module addresses this problem by plugging in seamlessly into the Magento2 A
 Install the module via composer
 
 ```
-$ composer install "mediaman/module-product-category-sort-order: 1.*"
+$ composer require "mediaman/module-product-category-sort-order: 1.*"
 ```
 
 Enable the module
