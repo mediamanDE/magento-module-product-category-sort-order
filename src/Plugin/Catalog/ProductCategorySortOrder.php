@@ -58,8 +58,11 @@ class ProductCategorySortOrder
     public function beforeSetCurPage(ProductCollection $subject, $page)
     {
         $searchCriteriaData = $this->http->get('searchCriteria');
+        if (!$searchCriteriaData) {
+            return;
+        }
 
-        foreach (array_keys($searchCriteriaData) as $key) {
+        foreach (array_keys((array)$searchCriteriaData) as $key) {
             $value = &$searchCriteriaData[$key];
             unset($searchCriteriaData[$key]);
 
