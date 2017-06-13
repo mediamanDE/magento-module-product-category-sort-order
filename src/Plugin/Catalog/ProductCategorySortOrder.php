@@ -62,7 +62,7 @@ class ProductCategorySortOrder
             return;
         }
 
-        foreach (array_keys((array)$searchCriteriaData) as $key) {
+        foreach (array_keys($searchCriteriaData) as $key) {
             $value = &$searchCriteriaData[$key];
             unset($searchCriteriaData[$key]);
 
