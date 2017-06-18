@@ -23,8 +23,8 @@
     }
   ],
   "scripts": {
-    "phpcs": "phpcs --standard=PSR1,PSR2 ./src",
-    "static-analyse": "phpstan analyse -l 4 -c phpstan.neon ./src",
+    "phpcs": "phpcs --standard=PSR1,PSR2 ./Plugin ./registration.php ",
+    "static-analyse": "phpstan analyse -l 4 -c phpstan.neon ./Plugin ./registration.php",
     "test": "phpunit -c phpunit.xml",
     "ci": "composer run phpcs && composer run static-analyse && composer run test"
   },
@@ -48,10 +48,10 @@
   },
   "autoload": {
     "files": [
-      "src/registration.php"
+      "./registration.php"
     ],
     "psr-4": {
-      "Mediaman\\ProductCategorySortOrder\\": "src/"
+      "Mediaman\\ProductCategorySortOrder\\": ""
     }
   }
 }
